@@ -1034,6 +1034,7 @@ class ModelRunnerKVCacheMixin:
                     size_swa=self.swa_max_total_num_tokens,
                     page_size=self.page_size,
                     dtype=self.kv_cache_dtype,
+                    post_capture_active=self.post_capture_kv_active,
                     head_num=self.model_config.get_num_kv_heads(
                         get_parallel().attn_tp_size
                     ),
